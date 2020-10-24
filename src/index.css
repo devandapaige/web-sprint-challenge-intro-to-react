@@ -2,6 +2,16 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url('./images/sw-bg.jpg');
+  background-image: url("./images/1014033.jpg");
   background-size: cover;
+  color: white;
+}
+a {
+  color: white;
+}
+a:hover {
+  color: lightgrey;
+}
+a:visited {
+  color: lightgrey;
 }
