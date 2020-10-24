@@ -6,7 +6,9 @@ const App = () => {
   const [characterData, setCharacterData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://rickandmortyapi.com/api/character/?name=rick")
+      .get(
+        "https://rickandmortyapi.com/api/character/?name=rick"
+      )
       .then((response) => {
         setCharacterData(response.data.results);
       })
@@ -23,10 +25,15 @@ const App = () => {
       <main>
         {characterData.map((character) => {
           return (
-            <CharacterCard key={character.id} name={character.name} image={character.image} location={character.location.name} status={character.status}/>
-          )
-        }
-        )}
+            <CharacterCard
+              key={character.id}
+              name={character.name}
+              image={character.image}
+              location={character.location.name}
+              status={character.status}
+            />
+          );
+        })}
       </main>
       <footer>
         <p>

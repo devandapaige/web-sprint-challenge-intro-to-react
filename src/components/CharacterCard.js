@@ -8,6 +8,8 @@ const Card = styled.div`
   align-items: center;
   width: 45%;
   background-color: white;
+  margin: 0.3rem;
+  border-radius: 20px;
 `;
 const Photo = styled.img`
   width: 25%;

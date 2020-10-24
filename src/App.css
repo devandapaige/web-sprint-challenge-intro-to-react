@@ -8,8 +8,11 @@ header {
   margin: 0;
   padding: 1.5rem;
 }
-.cardName {
-  font-size: 1.2rem;
+main {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-evenly;
+  margin: 1rem;
 }
 footer {
   background-color: #060039;
