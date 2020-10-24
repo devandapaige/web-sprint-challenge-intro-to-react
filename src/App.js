@@ -1,20 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
-import Character from "./components/Character";
+import axios from "axios";
+import CharacterCard from "./components/CharacterCard";
 const App = () => {
-  // Try to think through what state you'll need for this app before starting. Then build out
-  // the state properties here.
-
-  // Fetch characters from the API in an effect hook. Remember, anytime you have a
-  // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
-
+  const [characterData, setCharacterData] = useState([]);
+  useEffect(() => {
+    axios
+      .get("https://rickandmortyapi.com/api/character/?name=rick")
+      .then((response) => {
+        setCharacterData(response.data.results);
+      })
+      .catch((error) => {
+        console.log("Ah, geez.", error);
+      });
+  }, []);
+  console.log(characterData);
   return (
     <div className="App">
       <header>
-        <h1 className="Header">Ricks of Rick and Morty</h1>
+        <h1 className="Header">The Ricks of Rick and Morty</h1>
       </header>
-      <Character />
+      <main>
+        {characterData.map((character) => {
+          return (
+            <CharacterCard key={character.id} name={character.name} image={character.image} location={character.location.name} status={character.status}/>
+          )
+        }
+        )}
+      </main>
       <footer>
         <p>
           Coded by <a href="https://github.com/devandapaige">Amanda Nelson</a>
@@ -29,5 +42,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;
