@@ -2,22 +2,24 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
 import CharacterCard from "./components/CharacterCard";
-//default:
 const App = () => {
   const [characterData, setCharacterData] = useState([]);
   let Search = (input) => {
     if (input === "") {
+      document.getElementsByName(
+        "h1"
+      ).textContent = `${input}s of Rick and Morty`;
       return "";
     } else {
       return input;
     }
   };
-  console.log(Search("morty"));
+  //default alive characters shown on page before button clicks:
   useEffect(() => {
     axios
       .get("https://rickandmortyapi.com/api/character?", {
         params: {
-          name: Search,
+          name: Search(),
         },
       })
       .then((response) => {
@@ -36,18 +38,10 @@ const App = () => {
           <button id="rick" onClick={Search("rick")}>
             Ricks
           </button>
-          <button id="morty" onClick={Search("morty")}>
-            Mortys
-          </button>
-          <button id="jerry" onClick={Search("jerry")}>
-            Jerrys
-          </button>
-          <button id="summer" onClick={Search("summer")}>
-            Summers
-          </button>
-          <button id="beth" onClick={Search("beth")}>
-            Beths
-          </button>
+          <button id="morty">Mortys</button>
+          <button id="jerry">Jerrys</button>
+          <button id="summer">Summers</button>
+          <button id="beth">Beths</button>
         </div>
       </header>
       <main>
