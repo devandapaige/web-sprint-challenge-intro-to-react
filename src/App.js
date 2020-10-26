@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import axios from "axios";
 import CharacterCard from "./components/CharacterCard";
-
+import { getCharacter } from 'rickmortyapi'
 const App = () => {
-  const [characterData, setCharacterData] = useState([]);
+  const [characterData, setCharacterData] = useState([getCharacter().promiseresult.results]);
   let Search = (input) => {
     if (input === "") {
       return "";
@@ -15,21 +14,7 @@ const App = () => {
       return input;
       }};
   //default alive characters shown on page before button clicks:
-  useEffect(() => {
-    axios
-      .get("https://rickandmortyapi.com/api/character?", {
-        params: {
-          name: Search(),
-        },
-      })
-      .then((response) => {
-        setCharacterData(response.data.results);
-      })
-      .catch((error) => {
-        console.log("Ah, geez.", error);
-      });
-  }, []);
-  console.log(characterData);
+  console.log(getCharacter());
   return (
     <div className="App">
       <header>
