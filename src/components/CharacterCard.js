@@ -13,6 +13,8 @@ const Card = styled.div`
 `;
 const Photo = styled.img`
   width: 25%;
+  border-radius: 20px;
+  border: solid gray 2px;
 `;
 const CardInfo = styled.div`
   color: black;

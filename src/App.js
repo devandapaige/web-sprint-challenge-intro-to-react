@@ -40,10 +40,7 @@ const App = () => {
           Coded by <a href="https://github.com/devandapaige">Amanda Nelson</a>
         </p>
         <p>
-          Background Photo by{" "}
-          <a href="https://alphacoders.com/users/profile/143138/abnerndr">
-            Abner Andre
-          </a>
+         2020
         </p>
       </footer>
     </div>

@@ -15,9 +15,10 @@ main {
   margin: 1rem;
 }
 footer {
-  background-color: #060039;
+  background-color:#5DB331;
   display: flex;
   justify-content: space-between;
+  color: black;
   margin: 0;
   padding: 1.5rem;
 }
