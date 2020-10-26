@@ -2,18 +2,18 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
 import CharacterCard from "./components/CharacterCard";
+
 const App = () => {
   const [characterData, setCharacterData] = useState([]);
   let Search = (input) => {
     if (input === "") {
+      return "";
+    } else {
       document.getElementsByName(
         "h1"
       ).textContent = `${input}s of Rick and Morty`;
-      return "";
-    } else {
       return input;
-    }
-  };
+      }};
   //default alive characters shown on page before button clicks:
   useEffect(() => {
     axios

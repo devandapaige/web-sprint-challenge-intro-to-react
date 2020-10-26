@@ -8,6 +8,38 @@ header {
   margin: 0;
   padding: 1.5rem;
 }
+.buttonsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+button {
+  padding: 1rem;
+  border-radius: 25px;
+  border: none;
+  font-family: "Oswald", helvetica, sans-serif;
+}
+button:hover {
+  cursor: pointer;
+  color: white;
+  padding: 0.9rem;
+  border: 1px solid white;
+}
+#rick {
+  background-color: #97d7d7;
+}
+#morty {
+  background-color: #f9f675;
+}
+#jerry {
+  background-color: #445129;
+}
+#summer {
+  background-color: #de6dc7;
+}
+#beth {
+  background-color: #e85355;
+}
 main {
   display: flex;
   flex-flow: wrap row;
@@ -15,7 +47,7 @@ main {
   margin: 1rem;
 }
 footer {
-  background-color:#5DB331;
+  background-color: #5db331;
   display: flex;
   justify-content: space-between;
   color: black;
