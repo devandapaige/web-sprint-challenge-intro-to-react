@@ -30,11 +30,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
-1. Describe component state.
+## React JS lets us utilize complicated state via components. React JS along with JSX give us a new, hybrid way to utilize Javascript and HTML components together to create rendered user interfaces that may not always need to be refreshed globally.
 
-1. Describe props.
+2. Describe component state.
 
-1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+## Component State is local paramaters that may change per user input on a single component.
+
+3. Describe props.
+
+## Props is paramaters that can be imported into other components. Generally props is passed out of a local component state.
+
+4. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+## Side effects are possible rendering issues in a component where the local component may render more than needed or desired. This can be particularly problematic when dealing with an API with a limited call key, or error messages for a user. In order to sync effects with each other so there is only rendering when certain state (or props) is changed, you need to utilize the "useEffect" within React, and create the parameter for which the call should be made.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -42,26 +50,26 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Run `npm install` to retrieve all needed dependencies.
-- [ ] Once you have installed the _node_modules_, run `npm start` to get your server up and running.
-- [ ] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: `git push origin <firstName-lastName>`
+- [✅] Create a forked copy of this project
+- [✅] Add your mentor as collaborator on Github
+- [✅] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [✅] Create a new branch: `git checkout -b <firstName-lastName>`.
+- [✅] Run `npm install` to retrieve all needed dependencies.
+- [✅] Once you have installed the _node_modules_, run `npm start` to get your server up and running.
+- [✅] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
+- [✅] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [✅] Push commits: `git push origin <firstName-lastName>`
 
 ### Task 2: Project Requirements
 
 Your finished project must include all of the following requirements:
 
-- [ ] Use ONE of the following APIs:
+- [✅] Use ONE of the following APIs:
   - [Star Wars API](https://swapi.dev/)
   - [Alternate Star Wars API](https://swapi.py4e.com/)
-  - [The Rick and Morty API](https://rickandmortyapi.com/)
+  - ✅[The Rick and Morty API](https://rickandmortyapi.com/)
   - [The RESTful Pokémon API](https://pokeapi.co/) (**harder**)
-- [ ] Use the documentation and Google to learn how to fetch characters from your API.
+- [✅] Use the documentation and Google to learn how to fetch characters from your API.
 - [ ] Obtain a list of characters. One or several requests might be needed, depending on the API.
 - [ ] Set the list of characters into state.
 - [ ] Render your characters to the screen:
